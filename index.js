@@ -22,7 +22,7 @@ const port=8080;
 
 app.use(express.json());//json형식의 데이터 처리할수 있도록 설정하는 코드
 app.use(cors({
-  origin: ['http://localhost:3000', "https://react-signup-heid.vercel.app"], //허용하는 출처 목록
+  origin: [ "https://react-signup-heid.vercel.app",'http://localhost:3000'], //허용하는 출처 목록
   credentials: true
 }
 )) //브라우저 이슈 막기위한것
