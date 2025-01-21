@@ -22,7 +22,7 @@ const port=8080;
 
 app.use(express.json());//json형식의 데이터 처리할수 있도록 설정하는 코드
 app.use(cors({
-  origin: [ "https://react-signup-iota.vercel.app",'http://localhost:3000'], //허용하는 출처 목록
+  origin: [ "https://react-signup-chi.vercel.app/",'http://localhost:3000'], //허용하는 출처 목록
   credentials: true
 }
 )) //브라우저 이슈 막기위한것
@@ -146,7 +146,7 @@ app.get('/users/check-id', (req, res)=>{
 
 //.sync()통해 db를 연결
 app.listen(port, ()=>{
-  console.log('펫샵 서버가 돌아가고 있습니다.')
+  console.log('서버가 돌아가고 있습니다.')
   models.sequelize.sync()
   .then(()=>{
     console.log('DB연결 성공')
